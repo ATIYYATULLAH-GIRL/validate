@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS VALIDATION</title>
+        <script>
+            function validateForm(){
+                var x=document.forms["myForm"]["fname"].value;
+                var y=document.forms["myForm"]["id1"].value;
+                if (x=="" || y==""){
+                    alert("Name/Age Cannot Be Empty");
+                    return false;
+                }
+                else 
+                alert("Successfully Logged In");
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" onsubmit="validateForm()">
+            Name: <input type="text" name="fname"> 
+            <br><br>
+            Age: <input id="id1" type="number" min="18">
+            <br><br> 
+            <input type="submit" value="LOGIN">
+            <p id="message"></p>
+        </form>
+    </body>
+</html>
